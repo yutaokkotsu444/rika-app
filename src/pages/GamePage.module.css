@@ -1,0 +1,155 @@
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5rem 2rem 2rem;
+  overflow-y: auto;
+}
+
+.inner {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Search box */
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(14,14,14,0.82);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: var(--radius);
+  padding: 0 8px 0 14px;
+  backdrop-filter: blur(18px);
+  transition: border-color 0.2s;
+}
+
+.searchBox:focus-within {
+  border-color: rgba(255,255,255,0.3);
+}
+
+.icon { color: var(--text3); flex-shrink: 0; }
+
+.input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-size: 0.82rem;
+  padding: 0.72rem 0;
+  letter-spacing: 0.01em;
+}
+
+.input::placeholder { color: var(--text3); }
+
+.goBtn {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text2);
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.14s;
+}
+.goBtn:hover { background: var(--surface3); color: var(--text); }
+
+/* Results */
+.resultsWrap {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.resultsLabel {
+  font-size: 0.65rem;
+  color: var(--text3);
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+.results {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resultRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.bullet {
+  color: var(--accent);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* Title button (Unscramble / Acronym) */
+.titleBtn {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border2);
+  border-radius: 5px;
+  color: var(--text2);
+  font-size: 0.78rem;
+  font-weight: 400;
+  padding: 4px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.13s;
+}
+.titleBtn:hover {
+  background: var(--surface2);
+  color: var(--text);
+  border-color: rgba(255,255,255,0.28);
+}
+.titleBtnCopied {
+  background: rgba(255,255,255,0.08) !important;
+  border-color: rgba(255,255,255,0.4) !important;
+  color: var(--text) !important;
+}
+.copiedMark {
+  font-size: 0.6rem;
+  color: var(--text3);
+}
+
+/* Expand button (Unscramble) */
+.expandBtn {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  color: var(--text2);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 3px 10px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.13s;
+  flex-shrink: 0;
+}
+.expandBtn:hover {
+  background: var(--surface3);
+  color: var(--text);
+  border-color: rgba(255,255,255,0.3);
+}
+
+.noResults {
+  margin-top: 1.5rem;
+  font-size: 0.72rem;
+  color: var(--text3);
+  font-style: italic;
+}

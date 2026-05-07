@@ -1,0 +1,172 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.18s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.popup {
+  position: relative;
+  background: rgba(22, 22, 26, 0.92);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 2rem 2.2rem 2rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7);
+  animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.glow {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 80px;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.06) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--red);
+  font-size: 0.85rem;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.closeBtn:hover { background: var(--red-dim); }
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section:last-child { margin-bottom: 0; }
+
+.sectionLabel {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.55rem;
+}
+
+/* Copyable title/name button */
+.copyableBtn {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border2);
+  border-radius: 5px;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 400;
+  padding: 5px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.14s;
+  text-align: left;
+}
+
+.copyableBtn:hover {
+  background: var(--surface3);
+  border-color: rgba(255,255,255,0.3);
+}
+
+.btnCopied {
+  background: rgba(255,255,255,0.1) !important;
+  border-color: rgba(255,255,255,0.45) !important;
+}
+
+.copiedMark {
+  font-size: 0.65rem;
+  color: var(--text2);
+}
+
+/* Character list */
+.charList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.charRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.charDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.flipBtn {
+  background: none;
+  border: none;
+  color: var(--text3);
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.14s;
+  flex-shrink: 0;
+}
+
+.flipBtn:hover {
+  color: var(--text);
+  background: var(--surface2);
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text2);
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  padding: 3px 8px;
+}
